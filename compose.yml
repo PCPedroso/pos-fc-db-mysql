@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   mysql:
-    image: mysql:8.4.0
     container_name: mysql
+    image: mysql:8.4.0
     restart: always
     platform: linux/amd64
     environment:
@@ -12,3 +12,6 @@ services:
       MYSQL_PASSWORD: root
     ports:
       - 3306:3306
+volumes:
+  mysql:
+    name: mysql
